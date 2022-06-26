@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class) // 针对HomeController.class的测试
+@WebMvcTest() // 针对HomeController.class的测试
 //@SpringBootTest
 //@AutoConfigureMockMvc
 public class HomeControllerTest {
