@@ -3,6 +3,8 @@ package com.kkworld.sre.tacocloud.models;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @RequiredArgsConstructor
 public class Ingredient {
@@ -13,4 +15,6 @@ public class Ingredient {
     public static enum Type {
         WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
     }
+
+    private Date createdAt;
 }
