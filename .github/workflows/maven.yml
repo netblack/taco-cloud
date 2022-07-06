@@ -22,5 +22,23 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
+    - name: Cache Maven packages
+      uses: actions/cache@v3.0.4
+      with:
+        # A list of files, directories, and wildcard patterns to cache and restore
+        path: ~/.m2
+        # An explicit key for restoring and saving the cache
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        # An ordered list of keys to use for restoring stale cache if no cache hit occurred for key. Note `cache-hit` returns false in this case.
+        restore-keys: ${{ runner.os }}-m2
+        upload-chunk-size: # optional
+    - name: Run Tests
+      run: mvn -B test
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    - name: Upload output file
+      uses: actions/upload-artifact@v3
+      with:
+        name: jar
+        path: .target/*.jar
