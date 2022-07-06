@@ -89,12 +89,7 @@ jobs:
 #          version_label: ${{github.SHA}}
 #          region: us-east-1
 #          deployment_package: data-0.0.1-SNAPSHOT.jar
-  name: container publish
-  on:
-    release:
-      types: [created]
-  jobs:
-    publish:
+  publish:
       runs-on: ubuntu-latest
       steps:
         - name: Set up QEMU
