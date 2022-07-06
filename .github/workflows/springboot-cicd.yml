@@ -92,7 +92,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: wangjifeng/taco-cloud:{{ env.GITHUB_SHA }}
+          tags: wangjifeng/taco-cloud:${{ env.GITHUB_SHA }}
       #Deploy the artifact (JAR) into AWS Beanstalk
 #      - name: Deploy to EB
 #        uses: einaregilsson/beanstalk-deploy@v13
