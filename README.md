@@ -2,6 +2,8 @@
 
 访问链接：http://34.71.143.111/design
 
+Srping 实战第5版： https://potoyang.gitbook.io/spring-in-action-v5/
+
 This is the sample code for _Spring in Action, Fifth Edition_, by Craig Walls (https://www.manning.com/books/spring-in-action-fifth-edition).
 
 There is one folder for each chapter in the book--except for chapters 11 and 12, which share a source folder--each containing most or all of the sample code for that chapter.
